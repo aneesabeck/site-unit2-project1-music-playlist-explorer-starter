@@ -8,15 +8,55 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     
     <link rel="stylesheet" href="style.css">
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <!-- Your header content here -->
+        <h2>MUSIC PLAYLIST EXPLORER</h2>
     </header>
+
+    <!-- Search Bar -->
+
+    <div class="topnav">
+        <div class = "dropdown">
+            <button onclick = "sortFunc()" class="dropbtn">Sort</button>
+            <div id = "dropdown" class = "dropdown-content">
+                <h3 id ="alpha">Alphabetical</h3>
+                <h3 id = "most">Most Played</h3>
+                <h3 id = "least">Least Played</h3>
+            </div>
+        </div>
+        <input onkeyup="search_playlist()" id = "searchbar" type="text" placeholder="Search..">
+      </div>
 
     <main> 
         <!-- Your main content here -->
+
+        <!--Grid Layout of Playlist Container-->
+        <div class ="playlist-cards flex-container" id = "cardsContainer">
+        </div>
+
+        <!-- Modal Structure -->
+        <br>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <!--Needs a close button-->
+                <span class="close">&times;</span>
+                <div  class = "modal-head" id = "modal-content-id"></div>
+
+                <div class = "songs" id = "songsList">
+                   
+                
+            </div>
+        </div>
+    </div>
     </main>
+
 
     <footer>
         <!-- Your footer content here -->
